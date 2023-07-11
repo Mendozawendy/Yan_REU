@@ -1,0 +1,80 @@
+\documentclass[11pt, twocolumn]{article}
+%Packages 
+\usepackage{graphicx} % Required for inserting images
+\usepackage[english]{babel}
+\usepackage{lipsum} % This package generates filler text
+\usepackage{newtxtext} % Sets the default text font to Times New Roman
+\usepackage{setspace} % Used to set line spacing
+\usepackage{hyperref} % For adding links
+\usepackage{amsmath} % For advanced math formatting
+\usepackage{natbib} % For better bibliography management
+\usepackage[margin=0.5in]{geometry} % Increase margins to make the text area narrower
+\usepackage[framemethod=TikZ]{mdframed} 
+
+
+\onehalfspacing % Sets line spacing to double
+
+% Manually defining the title 
+\newcommand{\paperTitle}{Quantifying Stellar Variability: \\ Photometric Techniques for Magnitude Measurement}
+
+% Manually defining the authors
+\newcommand{\authors}{
+\begin{flushleft}
+
+\begin{center}
+Yan Chimal Tobon, Wendy Mendoza, Dr. Liliana Rivera Sandoval, Dr. Mario Diaz
+\end{center}
+
+\textit{The University of Texas Rio Grande Valley, Brownsville, TX 78520, USA} \\
+\textit{The Department of Physics \& Astronomy} \\
+\textit{Research Experience for Undergraduates} 
+\textit{Summer 2023} \\
+\textit{Email: \href{mailto:your.email@example.com}{your.email@example.com}}
+%type your email}
+\end{flushleft}
+}
+
+% Create a new environment that centers the title of the abstract
+
+\newenvironment{centeredabstract}
+{\begin{mdframed}[hidealllines=true,backgroundcolor=gray!20,linewidth=2pt,
+  topline=true,
+  bottomline=true]\begin{quote}\textbf{Abstract}}
+{\end{quote}\end{mdframed}}
+
+\begin{document}
+
+\twocolumn[
+% Display the title and authors
+\begin{center}
+{\LARGE \textbf{\paperTitle}} % Large, bold title
+\end{center}
+\vspace{0.05cm} % Some space between the title and author details
+{\large \authors} % Large author details
+
+\vspace{0.05cm} % Some space between the authors and abstract
+
+\begin{centeredabstract}
+    Leave it at the end: A brief summary of the research paper that provides an overview of the study's objectives, methods, results, and conclusions... 
+    Déjelo al final.: Un breve resumen del artículo de investigación que brinda una visión general de los objetivos, métodos, resultados y conclusiones del estudio....
+
+    \noindent \textbf{Keywords:} Sun: abundances; stars: early-type; Galaxy: structure; galaxies: individual (M31)
+\end{centeredabstract}
+]
+
+\input{Introduction}
+\input{Literature} %Optional (opcional)
+\input{Methods}
+\input{Results}
+\input{Discussion}
+\input{Conclusion}
+\input{Acknowledgment} %if necessary (si es necesario) 
+
+\appendix 
+\input{Appendix} %if necessary (si es necesario) 
+
+\bibliographystyle{apalike}
+\bibliography{references} % assuming you have a references.bib file
+
+\end{document}
+
